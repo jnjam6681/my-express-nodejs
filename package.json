@@ -1,0 +1,18 @@
+{
+  "name": "my-express-nodejs",
+  "main": "./lib/my-express-nodejs",
+  "version": "0.0.0",
+  "description": "A package for easy life.",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "my-express-nodejs:toggle"
+  },
+  "repository": "https://github.com/jnjam6681/my-express-nodejs",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

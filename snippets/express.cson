@@ -1,0 +1,30 @@
+
+'.source.js':
+  'post method express':
+    'prefix': 'post'
+    'body': """
+      post('/$1', (req, res) => {
+        $2
+      });
+    """
+  'get method express':
+    'prefix': 'get'
+    'body': """
+      get('/$1', (req, res) => {
+        $2
+      });
+    """
+  'delete method express':
+    'prefix': 'delete'
+    'body': """
+      delete('/$1', (req, res) => {
+        $2
+      });
+    """
+  'put method express':
+    'prefix': 'put'
+    'body': """
+      put('/$1', (req, res) => {
+        $2
+      });
+    """
