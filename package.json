@@ -1,10 +1,9 @@
 {
   "name": "my-express-nodejs",
   "main": "./lib/my-express-nodejs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A package for easy life.",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "my-express-nodejs:toggle"
   },
@@ -13,6 +12,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
