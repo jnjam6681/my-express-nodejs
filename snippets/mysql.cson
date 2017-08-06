@@ -1,0 +1,33 @@
+'.source.js':
+  'require mysql':
+    'prefix': 'reqmysql'
+    'body': "const mysql = require('mysql');"
+  'mysql create connection':
+    'prefix': 'createConnection'
+    'body': """
+      var db = mysql.createConnection({
+        host     : 'localhost',
+        user     : 'root',
+        password : 'password',
+        // database : 'nodemysql'
+      });
+    """
+  'mysql connect':
+    'prefix': 'connect'
+    'body': """
+      db.connect((err) => {
+        if (err) {
+          throw err;
+        }
+        console.log('mysql connected...');
+      });
+    """
+  'mysql query':
+    'prefix': 'query'
+    'body': """
+      query(sql, (err, result) => {
+        if (err) throw err;
+        console.log(result);
+        res.send($1);
+      })
+    """

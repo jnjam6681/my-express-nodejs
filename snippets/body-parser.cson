@@ -1,0 +1,10 @@
+'.source.js':
+  'require body-parser':
+    'prefix': 'reqbody'
+    'body': "const bodyParser = require('body-parser');"
+  'body-parser middleware':
+    'prefix': 'usebody'
+    'body': """
+      app.use(bodyParser.json());
+      app.use(bodyParser.urlencoded({ extended: false }));
+    """

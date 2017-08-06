@@ -1,5 +1,11 @@
 
 '.source.js':
+  'require express':
+    'prefix': 'reqexpress'
+    'body': """
+      const express = require('express');
+      const app = express();
+    """
   'post method express':
     'prefix': 'post'
     'body': """

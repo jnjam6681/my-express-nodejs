@@ -1,0 +1,35 @@
+'.source.js':
+  'set static path':
+    'prefix': 'usestatic'
+    'body': "app.use('/static$1', express.static('public'));"
+  'set port':
+    'prefix': 'setport'
+    'body': """
+      var port = process.env.PORT || 3000;
+      $1
+      app.listen(port, function (req, res) {
+        console.log("listening...");
+      });
+    """
+  'send response express':
+    'prefix': 'send'
+    'body': """
+      send($1);
+    """
+  'render express':
+    'prefix': 'render'
+    'body': """
+      render($1);
+    """
+  'set express':
+    'prefix': 'set'
+    'body': """
+      set($1);
+    """
+  'listen express':
+    'prefix': 'listen'
+    'body': """
+      listen(port, (req, res) => {
+        console.log("listening...");
+      });
+    """
