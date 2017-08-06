@@ -1,7 +1,7 @@
 {
   "name": "my-express-nodejs",
   "main": "./lib/my-express-nodejs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A package for easy life.",
   "keywords": [],
   "activationCommands": {
