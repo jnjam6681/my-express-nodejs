@@ -2,7 +2,7 @@
   'require mongoose':
     'prefix': 'reqmongoose'
     'body': """
-      const mongoose - require('mongoose');
+      const mongoose = require('mongoose');
     """
   'connect':
     'prefix': 'connectmongoose'
