@@ -5,9 +5,9 @@
   'set port':
     'prefix': 'setport'
     'body': """
-      var port = process.env.PORT || 3000;
+      const port = process.env.PORT || 3000;
       $1
-      app.listen(port, function (req, res) {
+      app.listen(port, (req, res) => {
         console.log("listening...");
       });
     """

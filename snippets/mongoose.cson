@@ -1,0 +1,38 @@
+'.source.js':
+  'require mongoose':
+    'prefix': 'reqmongoose'
+    'body': """
+      const mongoose - require('mongoose');
+    """
+  'connect':
+    'prefix': 'connectmongoose'
+    'body': """
+      mongoose.connect($1);
+      let db = mongoose.connection;
+    """
+  'check connection mongoose':
+    'prefix': 'checkconnect'
+    'body': """
+      db.once('open', () => {
+        console.log('Connected to MongoDB');
+      });
+    """
+  'check for db error mongoose':
+    'prefix': 'checkerror'
+    'body': """
+      db.on('error', (err) => {
+        console.log(err);
+      });
+    """
+  'check for db error mongoose':
+    'prefix': 'mongoose.Schema'
+    'body': """
+      const $1 = mongoose.Schema({
+        name:{
+          type: String,
+          require: true
+        }
+      });
+
+      const User = module.exports = mongoose.model('User', $1);
+    """

@@ -13,13 +13,6 @@
         $2
       });
     """
-  'get method express':
-    'prefix': 'get'
-    'body': """
-      get('/$1', (req, res) => {
-        $2
-      });
-    """
   'delete method express':
     'prefix': 'delete'
     'body': """
@@ -31,6 +24,13 @@
     'prefix': 'put'
     'body': """
       put('/$1', (req, res) => {
+        $2
+      });
+    """
+  'get method express':
+    'prefix': 'get'
+    'body': """
+      get('/$1', (req, res) => {
         $2
       });
     """
