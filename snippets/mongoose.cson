@@ -16,23 +16,72 @@
       db.once('open', () => {
         console.log('Connected to MongoDB');
       });
-    """
-  'check for db error mongoose':
-    'prefix': 'checkerror'
-    'body': """
+
       db.on('error', (err) => {
         console.log(err);
       });
     """
-  'check for db error mongoose':
+  'mongoose Schema':
     'prefix': 'mongoose.Schema'
     'body': """
-      const $1 = mongoose.Schema({
+      let $1 = mongoose.Schema({
         name:{
           type: String,
           require: true
         }
       });
 
-      const User = module.exports = mongoose.model('User', $1);
+      let User = module.exports = mongoose.model('User', $1);
+    """
+  'mongoose find':
+    'prefix': 'find'
+    'body': """
+      find({}, (err, $1) => {
+        if (err) {
+          console.log(err);
+        } else {
+
+        }
+      });
+    """
+  'mongoose save/ add data':
+    'prefix': 'save'
+    'body': """
+      save((err) => {
+        if (err) {
+          console.log(err);
+          return;
+        } else {
+          $1
+        }
+      });
+    """
+  'mongoose update':
+    'prefix': 'update'
+    'body': """
+      update(query, $1, (err) => {
+        if (err) {
+          console.log(err);
+          return;
+        } else {
+
+        }
+      });
+    """
+  'mongoose delete':
+    'prefix': 'remove'
+    'body': """
+      remove(query, (err) => {
+        if (err) {
+          console.log(err);
+        }
+        res.send('Success');
+      });
+    """
+  'mongoose findById':
+    'prefix': 'findById'
+    'body': """
+      findById(req.body.id, (err, $1) => {
+
+      });
     """
