@@ -24,14 +24,16 @@
   'mongoose Schema':
     'prefix': 'mongoose.Schema'
     'body': """
-      let $1 = mongoose.Schema({
+      const Schema = mongoose.Schema;
+
+      const $1 = mongoose.Schema({
         name:{
           type: String,
           require: true
         }
       });
 
-      let User = module.exports = mongoose.model('User', $1);
+      const User = module.exports = mongoose.model('User', $1);
     """
   'mongoose find':
     'prefix': 'find'
