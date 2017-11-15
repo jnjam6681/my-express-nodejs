@@ -33,7 +33,9 @@
         }
       });
 
-      const User = module.exports = mongoose.model('User', $1);
+      const $2 = mongoose.model('$2', $1);
+
+      module.exports = $2;
     """
   'mongoose find':
     'prefix': 'find'
